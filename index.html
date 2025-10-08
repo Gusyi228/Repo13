@@ -71,6 +71,22 @@
         top: 410px;
         left:620px
     }
+    p.e {
+        position: absolute;
+        top: 500px;
+        right: 730px;
+    }
+
+    p.f {
+        position: absolute;
+        top: 615px;
+        right: 660px;
+    }
+    p.g {
+        position: absolute;
+        top: 640px;
+        right: 660px;
+    }
 
 </style>
 <script>
@@ -86,23 +102,30 @@ function myFunction() {
      }
 </script>
 
-<script>
-    let text = "";
-
-    let i = 0;
-    while (i < 10) {
-        text += "The number is " + i + "<br>";
-        i++;
-    }
-
-    document.getElementById("demo3").innerHTML = text;
-</script>
 <body>
     <h1>JavaScript</h1>
     <p class="a" id="demo">I am Blue</p>
     <p class="b"  id="demo1">I am Green</p>
     <p class="c" id="demo2">You are...</p>
-    <p class="e" id="demo3">Loop</p>
+    <p class="e" id="demo3"></p>
+    <p class="f" id="demo4"></p>
+    <p class="g" id="demo5"></p>
+    <script>
+        let text = "";
+    
+        let i = 1;
+        while (i < 6) {
+            text += "Huuhuu " + i + "<br>";
+            i++;
+        }
+    
+        document.getElementById("demo3").innerHTML = text;
+    </script>
+
+    <script>
+        const animals = ["Cat!", "Dog!", "Mouse!", "Elephant!", "Tiger!", "lion!"];
+        document.getElementById("demo4").innerHTML = animals;
+    </script>
 
     <button class="button button1" onclick='document.getElementById("demo1").innerHTML ="Hello Java"'>Green</button>
     <button class="button button2"  onclick='document.getElementById("demo").innerHTML ="Hello Java!"'>Blue</button>
@@ -112,5 +135,15 @@ function myFunction() {
 
     <h2>Miten var, let ja const eroavat toisistaan?</h2>
     <p class="d">let luo vaijerin, joka voidaan myöhemmin kytkeä eri arvoihin. const luo vaijerin, joka on kiinnitetty yhteen arvoon eikä sitä voi muuttaa enää asettamisen jälkeen.</p>
+
+    <script>
+        // name and age are parameters<br>
+        function greet(name, age) {
+            return "Hello " + name + "! You are " + age + " years old.";
+        }
+        
+        document.getElementById("demo5").innerHTML = greet("Daniel", 19);
+    </script>
+
 </body>
 </html>
