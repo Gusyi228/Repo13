@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+</head>
+<style>
+    h1 {text-align: center;}
+    h1 {
+        color: coral;
+    }
+    h2 {text-align: center;}
+    h2 {
+        position: absolute;
+        left: 560px;
+        top: 250px;
+    }
+    p {
+        text-align-last: center; 
+        top: 300px; 
+    }
+
+    p.a {text-align: center;}
+    .button {
+        border: none;
+        color: White;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 4px;
+        cursor: pointer;
+    }
+    p.b {text-align: center;}
+    .button1 {
+        position: absolute;
+        top: 215px;
+        right: 640px;
+        padding: 10px 15px;
+    }
+    p.d {
+        position: absolute;
+        top: 300px;
+        right: 200px;
+
+    }
+    p.c {
+        position: absolute;
+        top: 360px;
+        right: 750px;
+    }
+    .button2 {
+        position: absolute;
+        top: 215px;
+        left: 640px;
+        padding: 10px 20px;
+    }
+    .button3 {
+        position: absolute;
+        top: 405px;
+        right: 650px;
+        padding: 3px 3px;
+    }
+    .button1 {background-color: green;} /*Green */
+    .button2 {background-color: blue;} /* Blue */
+    .button3 {background-color: orangered; /* Orangered */}
+    input {
+        position: absolute;
+        top: 410px;
+        left:620px
+    }
+
+</style>
+<script>
+function myFunction() {
+    let voteble;
+    let age = Number(document.getElementById("age").value);
+    if (isNaN(age)) {
+        voteable = "Input is not a nubmer";
+    } else {
+        voteable = (age < 18 ) ? "Alaikäinen" : "Täysi-käinen";
+    }
+    document.getElementById("demo2").innerHTML = voteable + "";
+     }
+</script>
+
+<script>
+    let text = "";
+
+    let i = 0;
+    while (i < 10) {
+        text += "The number is " + i + "<br>";
+        i++;
+    }
+
+    document.getElementById("demo3").innerHTML = text;
+</script>
+<body>
+    <h1>JavaScript</h1>
+    <p class="a" id="demo">I am Blue</p>
+    <p class="b"  id="demo1">I am Green</p>
+    <p class="c" id="demo2">You are...</p>
+    <p class="e" id="demo3">Loop</p>
+
+    <button class="button button1" onclick='document.getElementById("demo1").innerHTML ="Hello Java"'>Green</button>
+    <button class="button button2"  onclick='document.getElementById("demo").innerHTML ="Hello Java!"'>Blue</button>
+
+    <input id="age" value="18"></input>
+    <button class="button button3" onclick="myFunction()">Kokeile</button>
+
+    <h2>Miten var, let ja const eroavat toisistaan?</h2>
+    <p class="d">let luo vaijerin, joka voidaan myöhemmin kytkeä eri arvoihin. const luo vaijerin, joka on kiinnitetty yhteen arvoon eikä sitä voi muuttaa enää asettamisen jälkeen.</p>
+</body>
+</html>
